@@ -1,0 +1,206 @@
+.feedback {
+    .feedback_wrapper {
+        @include wrapper;
+        margin-top: 150px;
+        align-items: start;
+
+        .feedback_img {
+            width: 555px;
+            height: 555px;
+            overflow: hidden;
+            border-radius: 15px;
+            flex-shrink: 0;
+            z-index: 2;
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: 50% 50%;
+            }
+            .feedback_stars {
+                display: none;
+            }
+        }
+
+        .feedback_info {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: start;
+            margin-left: 64px;
+            padding-top: 20px;
+            position: relative;
+            
+            h4 {
+                @include subtitle;
+                margin-bottom: 15px;
+            }
+            h2 {
+                @include title;
+                margin-bottom: 30px;
+                padding-right: 140px;
+            }
+            p {
+                @include text;
+                padding-right: 120px;
+            }
+            .feedback_slider {
+                position: absolute;
+                top: 332px;
+                left: -265px;
+                width: 850px;
+                height: 495px;
+                background-color: #F9FAFE;
+                display: flex;
+                flex-direction: column;
+                padding: 74px 0 0 260px;
+                box-sizing: border-box;
+                
+                .feedback_slider_wrap {
+                    width: 550px;
+                    height: 270px;
+                    overflow: hidden;
+                    .feedback_slider_items {
+                        display: flex;
+                        position: relative;
+                        transition: all .2s;
+    
+                        .feedback_item {
+                            width: 550px;
+                            flex-shrink: 0;
+                            h3 {
+                                @include artical-header;
+                                margin-bottom: 25px;
+                            }
+                            p {
+                                @include text;
+                                margin-bottom: 30px;
+                            }
+                            .feedback_person_info {
+                                display: flex;
+                                margin-bottom: 42px;
+                                .feedback_person_info_img {
+                                    width: 63px;
+                                    height: 63px;
+                                    border-radius: 50%;
+                                    background-color: #DEE1E7;
+                                    img {
+                                        height: 100%;
+                                        width: 100%;
+                                        object-fit: cover;
+                                        object-position: 50% 50%;
+                                    }
+                                }
+                                .feedback_person_info_name {
+                                    margin-left: 16px;
+                                    h5 {
+                                        @include text;
+                                        color: #000;
+                                        margin-bottom: 8px;
+                                    }
+                                    p {
+                                        @include text;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                
+
+                .feedback_slider_remote {
+                    display: flex;
+                    width: 550px;
+
+                    .feedback_slider_pages {
+                        display: flex;
+                        align-items: center;
+                        p {
+                            @include text;
+                            color: #0165C3;
+                            padding: 0 8px;
+                        }
+                        .feedback_slider_page {
+                            display: inline-block;
+                            width: 56px;
+                            height: 3px;
+                            background-color: #E0EBF8;
+                            cursor: pointer;
+                        }
+
+                        .feedback_slider_page:hover {
+                            background-color: #0165C3;
+                        }
+                    }
+                    .feedback_slider_nav {
+                        display: flex; 
+                        justify-content: center;
+                        width: 100%;
+                        position: relative;
+                        
+                        .feedback_slider_nav_prev {   
+                            width: 56px;  
+                            margin: 0 5px;
+                            background: url('../source/img/arrow-left.png') center no-repeat;  
+                            z-index: 5;
+                            cursor: pointer;
+                        }
+                        
+                        .feedback_slider_nav_prev:hover {
+                            background: url('../source/img/arrow-active-right.png') center no-repeat;
+                            transform: rotate(180deg); 
+                        }
+
+                        .feedback_slider_nav_next {
+                            width: 56px;  
+                            background: url('../source/img/arrow-left.png') center no-repeat; 
+                            transform: rotate(180deg);  
+                            z-index: 5; 
+                            cursor: pointer;
+                        }
+                        .feedback_slider_nav_next:hover {
+                            background: url('../source/img/arrow-active-right.png') center no-repeat;
+                            transform: rotate(0deg); 
+                        }
+
+                        .feedback_slider_nav_prev_circle {
+                            position: absolute;
+                            width: 48px;
+                            height: 48px;
+                            border-radius: 50%;
+                            border: 2px solid #E0EBF8;
+                            top: -45%;
+                            left: 25%;
+                            opacity: 0;
+                            transition: all .1s;
+                        }
+
+                        .feedback_slider_nav_next_circle {
+                            position: absolute;
+                            width: 48px;
+                            height: 48px;
+                            border-radius: 50%;
+                            border: 2px solid #E0EBF8;
+                            top: -45%;
+                            right: 25%;
+                            opacity: 0;
+                            transition: all .1s;
+                        }
+
+                        .feedback_slider_nav_prev:hover ~ .feedback_slider_nav_prev_circle {
+                            opacity: 1;
+                            transition: all .1s;
+                        }
+
+                        .feedback_slider_nav_next:hover ~ .feedback_slider_nav_next_circle {
+                            opacity: 1;
+                            transition: all .1s;
+                        }
+
+                        
+                    }                    
+                }
+            }
+        }
+    }
+}

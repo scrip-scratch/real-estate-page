@@ -1,0 +1,79 @@
+@font-face {
+    font-family: "EuclidCircular-Regular";
+    src: url('../source/fonts/EuclidCircularB-Regular.ttf');
+}
+@font-face {
+    font-family: "EuclidCircular-Medium";
+    src: url('../source/fonts/EuclidCircularB-Medium.ttf');
+}
+@font-face {
+    font-family: "EuclidCircular-Bold";
+    src: url('../source/fonts/EuclidCircularB-Bold.ttf');
+}
+
+$font-regular: "EuclidCircular-Regular";
+$font-medium: "EuclidCircular-Medium";
+$font-bold: "EuclidCircular-Bold";
+
+@mixin wrapper {
+    padding: 0 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+@mixin subtitle {
+    font-family: $font-regular;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #0165C3;
+    margin: 0;
+}
+
+@mixin title {
+    font-family: $font-regular;
+    font-size: 45px;
+    margin: 0;
+}
+
+@mixin text {
+    font-family: $font-regular;
+    color: #656361;
+    font-size: 16px;
+    line-height: 28px;
+    margin: 0;
+}
+
+@mixin artical-header {
+    font-family: $font-regular;
+    font-size: 20px;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;   
+    box-sizing: border-box;
+}
+
+.wrap1440 {
+    max-width: 1440px;
+    margin : 0 auto;
+    
+}
+
+@import 'nav';
+@import 'findHouse';
+@import 'partners';
+@import 'services';
+@import 'highlight';
+@import 'awards';
+@import 'about';
+@import 'feedback';
+@import 'subscribe';
+@import 'contacts';
+@import 'footer';
+
+

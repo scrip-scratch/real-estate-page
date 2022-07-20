@@ -1,0 +1,58 @@
+.contacts {
+    .contacts_wrapper {
+        @include wrapper;
+        margin-top: 150px;
+
+        .contacts_description {
+            display: flex;
+            flex-direction: column;
+            margin-right: 136px;
+            .contacts_description_logo {
+                margin-bottom: 30px;
+            }
+            p {
+                @include text;
+                max-width: 371px;
+                margin-bottom: 40px;
+            }
+
+            .social_links {
+                display: flex;
+                a {
+                    margin-right: 21px;
+                }
+            }
+        }
+
+        .contacts_links,
+        .contacts_about,
+        .contacts_adress {
+            display: flex;
+            flex-direction: column;
+
+            h5 {
+                @include artical-header;
+                margin-bottom: 30px;
+            }
+            a, p {
+                @include text;
+                margin-bottom: 32px;
+                text-decoration: none;
+                transition: all .2s;
+            }
+            a:hover {
+                color: #0165C3;
+                transition: all .2s;
+            }
+        }
+        .contacts_links {
+            margin-right: 151px;
+        }
+        .contacts_about {
+            margin-right: 121px;
+        }
+        .contacts_adress {
+            margin-bottom: 72px;
+        }
+    }
+}

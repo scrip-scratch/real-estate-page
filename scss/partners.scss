@@ -1,0 +1,22 @@
+.partners {
+    .partners_wrapper {
+        @include wrapper;
+        padding-top: 150px;
+        flex-direction: column;
+        h4 {
+            @include subtitle;
+            margin-bottom: 16px;
+        }
+        h2 {
+            @include title;
+            margin-bottom: 20px;
+        }
+        p {
+            @include text;
+        }
+        .parnters_logos {
+            width: 100%;
+            margin-bottom: 100px;
+        }
+    }
+}

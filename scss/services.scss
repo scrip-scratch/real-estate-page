@@ -1,0 +1,87 @@
+.services {
+
+    background: #F9FAFE url('../source/img/find-house_bg_texture.png') no-repeat;
+
+    .services_wrapper {
+
+        @include wrapper;
+        flex-direction: column;
+
+        .services_info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 480px;
+            margin-bottom: 40px;
+            text-align: center;
+            h4 {
+                @include subtitle;
+                margin: 80px 0 16px 0;
+            }
+            h2 {
+                @include title;
+                margin: 0 0 30px 0;
+            }
+            p {
+                @include text;
+                margin: 0 0 25px 0;
+            }
+        }
+        .services_advantages {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 51px;
+
+            .advantage_block {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: start;
+                width: 380px;
+
+                background-color: #fff;
+                border-radius: 15px;
+                margin: 0 30px 0 0;
+                padding: 40px;
+                box-sizing: border-box;
+                .advantage_block_img {
+                    width: 64px;
+                    height: 64px;
+                    margin-bottom: 24px;
+                    border-radius: 15px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .advantage_block_img:nth-child(1){
+                    background-color: #EEF3F8;
+                }
+                .advantage_block_img:nth-child(2){
+                    background-color: #EFD357;
+                }
+                .advantage_block_img:nth-child(3){
+                    background-color: #EEF8FB;
+                }
+                h5 {
+                    @include artical-header;
+                    margin: 0 0 16px 0;
+                }
+                p {
+                    @include text;
+                    margin: 0 0 24px 0;
+                }
+                a {
+                    font-family: $font-regular;
+                    font-size: 20px;
+                    color: #0165C3;
+                    text-decoration: none;
+                }
+            }
+            .advantage_block:last-child {
+                margin: 0;
+            }
+        }
+
+    }
+}
