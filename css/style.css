@@ -781,7 +781,8 @@ nav {
         width: 550px; }
         .feedback .feedback_wrapper .feedback_info .feedback_slider .feedback_slider_remote .feedback_slider_pages {
           display: flex;
-          align-items: center; }
+          align-items: center;
+          position: relative; }
           .feedback .feedback_wrapper .feedback_info .feedback_slider .feedback_slider_remote .feedback_slider_pages p {
             font-family: "EuclidCircular-Regular";
             color: #656361;
@@ -798,6 +799,15 @@ nav {
             cursor: pointer; }
           .feedback .feedback_wrapper .feedback_info .feedback_slider .feedback_slider_remote .feedback_slider_pages .feedback_slider_page:hover {
             background-color: #0165C3; }
+          .feedback .feedback_wrapper .feedback_info .feedback_slider .feedback_slider_remote .feedback_slider_pages .feedback_slider_page_state {
+            display: inline-block;
+            position: absolute;
+            top: 13px;
+            left: 31px;
+            width: 56px;
+            height: 3px;
+            background-color: #0165C3;
+            transition: all .2s ease-in-out; }
         .feedback .feedback_wrapper .feedback_info .feedback_slider .feedback_slider_remote .feedback_slider_nav {
           display: flex;
           justify-content: center;

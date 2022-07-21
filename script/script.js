@@ -81,7 +81,29 @@ selectPrice.addEventListener('click',() => {
 
 // ============================= FEEDBACK SLIDER ==================================
 const feedbackSlider = document.querySelector('.feedback_slider_items');
+const sliderButtonPrev = document.querySelector('.feedback_slider_nav_prev');
+const sliderButtonNext = document.querySelector('.feedback_slider_nav_next');
+const sliderPages = Array.from(document.querySelectorAll('.feedback_slider_page'));
+const sliderPageState = document.querySelector('.feedback_slider_page_state');
+
 let offset = 0;
+
+function setSliderPageState (page) {
+    switch (page) {
+        case 0:
+            sliderPageState.style.left = '31px';
+            console.log(offset);
+            break;
+        case 1:
+            sliderPageState.style.left = '87px';
+            break;
+        case 2:
+            sliderPageState.style.left = '143px';
+            break;
+        default:
+            break;
+    }
+}
 
 function slideNext () {
     offset = offset + 550; 
@@ -89,6 +111,7 @@ function slideNext () {
         offset = 0;
     }
     feedbackSlider.style.left = -offset + 'px';
+    setSliderPageState (offset/550);
 }
 function slidePrev () {
     offset = offset - 550; 
@@ -96,11 +119,10 @@ function slidePrev () {
         offset = 1100;
     }
     feedbackSlider.style.left = -offset + 'px';
+    setSliderPageState (offset/550);
 }
 
-const sliderButtonPrev = document.querySelector('.feedback_slider_nav_prev');
-const sliderButtonNext = document.querySelector('.feedback_slider_nav_next');
-const sliderPages = Array.from(document.querySelectorAll('.feedback_slider_page'));
+
 
 
 sliderButtonNext.addEventListener('click', (e) => {
@@ -114,27 +136,15 @@ sliderButtonPrev.addEventListener('click', (e) => {
 
 sliderPages.forEach(page => {
     page.addEventListener('click', ()=>{
-        switch (sliderPages.indexOf(page)) {
-            case 0:
-                feedbackSlider.style.left = 0;
-                break;
-            case 1:
-                feedbackSlider.style.left = '-550px';
-                break;
-            case 2:
-                feedbackSlider.style.left = '-1100px';
-                break;
-            default:
-                break;
-        }
+
+        feedbackSlider.style.left = -550 * sliderPages.indexOf(page) + 'px';
+        setSliderPageState (sliderPages.indexOf(page));
     })
-} ) 
-
-setInterval(slideNext, 3000)
+})
 
 
 
-
+// setInterval(slideNext, 3000);
 
 // === Form ====
 document.querySelector('.subscribe_form_button').addEventListener('click', (e) => {
